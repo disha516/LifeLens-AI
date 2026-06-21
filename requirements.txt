@@ -1,0 +1,8 @@
+streamlit
+python-dotenv
+google-generativeai
+anthropic
+plotly
+reportlab
+pandas
+numpy
