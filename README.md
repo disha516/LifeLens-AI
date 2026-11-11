@@ -6,7 +6,7 @@ Life's biggest decisions (career changes, grad school, startups, relocation) req
 
 Built for the **USAII Global AI Hackathon 2026 (Undergraduate Track)** with **Google Gemini** + **Anthropic Claude**.
 
-🔗 **Live Demo:** Deployment link not currently listed.
+🔗 **Live Demo:** No verified live deployment link is currently available.
 ⚙️ **GitHub Repo:** [Add your Repo Link Here]
 
 ---
@@ -68,11 +68,11 @@ We implemented a decoupled modular architecture for clean UI and heavy AI liftin
 | Layer | Technology |
 |---|---|
 | 🖥️ Frontend UI | Streamlit |
-| 🧠 Scenario Engine | Google Gemini API (gemini-pro) |
-| 🕵️‍♂️ Reasoning Engine | Anthropic Claude API (claude-3-5-sonnet) |
+| 🧠 Scenario Engine | Google Gemini API (`gemini-pro`, as configured in the current source) |
+| 🕵️‍♂️ Reasoning Engine | Anthropic Claude API (`claude-3-5-sonnet-20241022`) |
 | 📊 Data Visualization | Plotly |
 | 📄 Document Generation | ReportLab |
-| ☁️ Deployment | Streamlit Cloud |
+| ☁️ Deployment | Streamlit Cloud (deployment status not independently verified) |
 
 ---
 
@@ -150,3 +150,11 @@ This project is open-source and available under the **MIT License**.
 - The Plotly radar-chart dimensions are currently estimated with keyword-based heuristics from each scenario's text; they are illustrative comparisons, not measured or independently validated outcomes.
 - The application uses external Gemini and Anthropic API services when credentials are configured. Do not enter sensitive personal information into prompts.
 - API model identifiers and availability can change; the configured identifiers in the source code should be checked before deployment.
+
+
+## Implementation Notes
+
+- The current source configures Gemini with the `gemini-pro` model identifier and Claude with `claude-3-5-sonnet-20241022`. API compatibility and successful end-to-end execution have not been independently tested; model availability can change.
+- The application sends decision prompts to external Gemini and Anthropic services when API credentials are configured. The interface's local-privacy indicator should not be interpreted as meaning that prompts remain entirely on the device. Avoid entering sensitive personal information.
+- Plotly radar-chart dimensions are generated using keyword-based heuristics and are illustrative comparisons, not measured or independently validated outcomes.
+- No live deployment URL is currently verified.
