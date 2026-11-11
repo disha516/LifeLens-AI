@@ -6,20 +6,20 @@ Life's biggest decisions (career changes, grad school, startups, relocation) req
 
 Built for the **USAII Global AI Hackathon 2026 (Undergraduate Track)** with **Google Gemini** + **Anthropic Claude**.
 
-🔗 **Live Demo:** [Add your Streamlit Cloud Link Here]
+🔗 **Live Demo:** Deployment link not currently listed.
 ⚙️ **GitHub Repo:** [Add your Repo Link Here]
 
 ---
 
 ## ✨ Key Features
 
-* 🔀 **Multi-AI Architecture:** Why use one brain? **Gemini 1.5 Pro** generates creative, realistic future scenarios, while **Claude 3.5 Sonnet** performs deep tradeoff reasoning and regret minimization.
+* 🔀 **Multi-AI Architecture:** Why use one brain? **Gemini API (scenario generation)** generates creative, realistic future scenarios, while **Claude 3.5 Sonnet** performs deep tradeoff reasoning and regret minimization.
 * 🎯 **Explicit Human Decision Zones:** Unlike AI that pretends to know it all, LifeLens explicitly refuses to make your choice. It isolates factors AI cannot compute (Emotional Weight, Relationships, Intuition, Values).
 * 🔥 **Devil's Advocate Mode:** A built-in guardrail that brutally challenges your safest option to break confirmation bias and test your true resolve.
 * 🎚️ **The "Gut Check" System:** Users rate their intuition against the AI's logical confidence score to find their actual alignment.
 * 📊 **Interactive Visualizations:** Deep tradeoff mapping and risk comparisons built with Plotly.
 * 📄 **Professional PDF Export:** Generate a clean, structured report using ReportLab to share with real-world mentors and family.
-* 📴 **Graceful Offline Fallback:** Never crashes. If APIs hit rate limits, the system seamlessly transitions into an Offline Demo Mode with pre-loaded case studies.
+* 📴 **Graceful Offline Fallback:** If an API call or response parsing fails, the application falls back to predefined demo scenarios or analysis. This keeps the demo usable, but does not guarantee that every API failure is handled without interruption.
 
 ---
 
@@ -29,7 +29,7 @@ Built for the **USAII Global AI Hackathon 2026 (Undergraduate Track)** with **Go
 graph TD
     A["👩‍🎓 User describes a major life dilemma"]
     B["🖥️ Streamlit Interface"]
-    C["🧠 Gemini 1.5 Pro (Scenario Generator)"]
+    C["🧠 Gemini API (scenario generation) (Scenario Generator)"]
     D["🕵️‍♂️ Claude 3.5 Sonnet (Deep Reasoning)"]
     E["📊 Plotly Visualizer"]
     F["🎯 Human Decision Zones"]
@@ -102,7 +102,7 @@ We implemented a decoupled modular architecture for clean UI and heavy AI liftin
 ### 1. Clone & install
 
 ```bash
-git clone [https://github.com/YOUR-USERNAME/lifelens-ai.git](https://github.com/YOUR-USERNAME/lifelens-ai.git)
+git clone https://github.com/disha516/LifeLens-AI.git
 cd lifelens-ai
 pip install -r requirements.txt
 ```
@@ -143,3 +143,10 @@ streamlit run app.py
 ## 📜 License
 
 This project is open-source and available under the **MIT License**.
+
+
+## Implementation Notes
+
+- The Plotly radar-chart dimensions are currently estimated with keyword-based heuristics from each scenario's text; they are illustrative comparisons, not measured or independently validated outcomes.
+- The application uses external Gemini and Anthropic API services when credentials are configured. Do not enter sensitive personal information into prompts.
+- API model identifiers and availability can change; the configured identifiers in the source code should be checked before deployment.
