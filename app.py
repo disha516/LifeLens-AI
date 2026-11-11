@@ -130,8 +130,17 @@ with st.sidebar:
     # 1. Dashboard Style Metrics
     st.markdown("### 📊 System Status")
     c1, c2 = st.columns(2)
-    c1.metric(label="AI Engines", value="2", delta="Active")
-    c2.metric(label="Privacy", value="100%", delta="Local")
+    configured_engines = int(bool(GEMINI_API_KEY)) + int(bool(CLAUDE_API_KEY))
+    c1.metric(
+        label="AI Engines Configured",
+        value=f"{configured_engines}/2",
+        delta="API keys detected" if configured_engines else "No API keys detected"
+    )
+    c2.metric(
+        label="Data Handling",
+        value="Cloud APIs",
+        delta="Prompts sent to Gemini / Claude"
+    )
     
     st.divider()
     
